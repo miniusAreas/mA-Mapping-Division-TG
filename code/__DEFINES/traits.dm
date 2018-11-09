@@ -50,7 +50,9 @@
 #define TRAIT_NOHARDCRIT		"nohardcrit"
 #define TRAIT_NOSOFTCRIT		"nosoftcrit"
 #define TRAIT_MINDSHIELD		"mindshield"
-
+#define TRAIT_DISSECTED			"dissected"
+#define TRAIT_SIXTHSENSE		"sixth_sense" //I can hear dead people
+#define TRAIT_FEARLESS			"fearless"
 
 #define TRAIT_ALCOHOL_TOLERANCE	"alcohol_tolerance"
 #define TRAIT_AGEUSIA			"ageusia"
@@ -90,3 +92,4 @@
 #define STASIS_MUTE "stasis"
 #define GENETICS_SPELL "genetics_spell"
 #define EYES_COVERED "eyes_covered"
+#define CULT_EYES "cult_eyes"

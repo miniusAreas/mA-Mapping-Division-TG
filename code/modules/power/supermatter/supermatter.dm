@@ -623,7 +623,11 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		return
 	else if(isobj(AM))
 		if(!iseffect(AM))
-			investigate_log("has consumed [AM].", INVESTIGATE_SUPERMATTER)
+			var/suspicion = ""
+			if(AM.fingerprintslast)
+				suspicion = "last touched by [AM.fingerprintslast]"
+				message_admins("[src] has consumed [AM], [suspicion] [ADMIN_JMP(src)].")
+			investigate_log("has consumed [AM] - [suspicion].", INVESTIGATE_SUPERMATTER)
 		qdel(AM)
 	if(!iseffect(AM))
 		matter_power += 200
@@ -649,6 +653,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	anchored = FALSE
 	gasefficency = 0.125
 	explosion_power = 12
+	layer = ABOVE_MOB_LAYER
 	moveable = TRUE
 
 /obj/machinery/power/supermatter_crystal/shard/engine
